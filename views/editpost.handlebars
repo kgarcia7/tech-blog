@@ -1,20 +1,37 @@
-<div>
-  <h2>Edit Post</h2>
-  <form class="edit-form">
-    <div>
-      <label>Title</label>
-      <input type="text" name="post-title" value="{{post.title}}" />
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h2>Edit Your Post</h2>
     </div>
+    <div class="card-body">
+      <form class="edit-form">
+        <div class="mb-3">
+          <label for="post-title" class="form-label">Title:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="post-title"
+            name="post-title"
+            value="{{post.title}}"
+          />
+        </div>
 
-    <div>
-      <label>Content</label>
-      <textarea name="post-content" />{{post.content}}"<textarea />
-    </div>
+        <div class="mb-3">
+          <label for="post-content" class="form-label">Content:</label>
+          <textarea
+            class="form-control"
+            id="post-content"
+            name="post-content"
+            rows="5"
+          >{{post.content}}</textarea>
+        </div>
 
-    <div>
-      <button type="submit">Edit Post</button>
+        <button type="submit" class="btn btn-primary"><i
+            class="bi bi-pencil"
+          ></i>Edit Post</button>
+      </form>
     </div>
-  </form>
+  </div>
 </div>
 
-<script src="../public/js/edit.js"></script>
+<script src="/js/edit.js"></script>

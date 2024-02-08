@@ -1,26 +1,40 @@
-<p>Log in to leave a comment</p>
-<div>
-  <div>
-    <h5>{{post.title}}</h5>
-    <h6>Posted by {{post.user.username}} on {{formateData post.created_at}}</h8>
-  </div>
-
-  <div>
-    {{> commentcard post.comments}}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <h2 class="card-header">Enter username and password to sign up</h2>
+        <div class="card-body">
+          <form id="signup-form">
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input
+                placeholder="Enter username"
+                type="text"
+                class="form-control"
+                id="username-signup"
+              />
+              <div id="usernameHelp" class="form-text">We'll never share your
+                username with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                placeholder="Enter password"
+                type="password"
+                class="form-control"
+                id="password-signup"
+              />
+              <div id="passwordHelp" class="form-text">Must be at least 4
+                characters long.</div>
+            </div>
+            <div class="mb-3">
+              <a href="/login">Already have an account? Login here</a>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
-<input type="hidden" name="post-id" value="{{post.id}}"/>
-
-{{#if loggedIn}}
-<div>
-  <div></div>
-  <form>
-    <p>Leave Comment</p>
-    <textarea id='comment' name="comment-body"></textarea>
-    <button type="submit">Submit Comment</button>
-  </form>
-</div>
-{{/if}}
-
-<script src="../public/js/comment.js"></script>
+<script src="/js/signup.js"></script>

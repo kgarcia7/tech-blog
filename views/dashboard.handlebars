@@ -1,21 +1,39 @@
 {{#if posts.length}}
-<section>
-  <div>
-    <h2>Welcome, {{username}}</h2>
-    <p>Click on a post to edit</p>
-  </div>
-
-  {{#each post as |post|}}
-  <input type ="hidden" name="post-id" value="{{post.id}}"/>
-    <div>
-      <div>
-        <h4><a href="/dashboard/edit{{id}}">{{title}}</a></h4>
+  <section class="container">
+    <div class="row align-items-center">
+      <div class="col">
+        <h2>Hello, {{username}}!</h2>
+        <p>Click on a post to edit it</p>
       </div>
-      <button id="del-post-btn">Delete Post</button>
     </div>
-    {{/each}}
-</section>
+    <br />
+    <div class="row">
+      {{#each posts as |post|}}
+        <div class="col-md-4 mb-4">
+          <input type="hidden" name="post-id" value="{{post.id}}" />
+          <div class="card">
+            <div class="card-header">
+              <h4><a
+                  class="link"
+                  href="/dashboard/edit/{{id}}"
+                >{{title}}</a></h4>
+            </div>
+            <div class="card-body">
+              <button class="btn btn-danger" id="del-post-btn"><i
+                  class="bi bi-trash"
+                ></i>Delete Post</button>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </section>
 {{/if}}
-<button><a href="/dashboard/new">Add New Post</a></button>
 
-<script src="../public/js/deletepost.js"></script>
+<div class="container mt-4">
+  <button type="submit" class="btn btn-primary"><a href="/dashboard/new"><i
+        class="bi bi-plus-square"
+      ></i>Add New Post</a></button>
+</div>
+
+<script src="js/deletepost.js"></script>

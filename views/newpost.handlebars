@@ -1,20 +1,35 @@
-<div>
-  <h2>Add New Post</h2>
-  <form id="newpost-form">
-    <div>
-      <label>Title:</label>
-        <input type="text" name="post-title">
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <h2 class="card-header">Add New Post</h2>
+        <div class="card-body">
+          <form id="newpost-form">
+            <div class="mb-3">
+              <label for="post-title" class="form-label">Title:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="post-title"
+                name="post-title"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="post-content" class="form-label">Content:</label>
+              <textarea
+                class="form-control"
+                id="post-content"
+                name="post-content"
+                rows="5"
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-
-    <div>
-      <label>Content</label>
-      <textarea name="post-content"></textarea>
-    </div>
-
-    <div>
-      <button type="submit">Add</button>
-    </div>
-  </form>
+  </div>
 </div>
-
-<script src="../public/js/newpost.js"></script>
+<script src="/js/newpost.js"></script>

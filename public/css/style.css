@@ -1,0 +1,128 @@
+:root {
+  --primary: #0766AD;
+  --secondary: #29ADB2;
+  --dark: #333;
+  --light: #f9f9f9;
+  --border-radius: 0.3rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
+  background-color: var(--light);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.navbar {
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--light);
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--light);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--secondary);
+}
+
+main {
+  padding: 90px 0 20px;
+  /* Adjusted padding to accommodate the navbar */
+}
+
+.post {
+  background-color: var(--light);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.post-header {
+  background-color: var(--secondary);
+  color: var(--light);
+  padding: 15px;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.post-title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.post-content {
+  padding: 15px;
+}
+
+.post-footer {
+  background-color: var(--secondary);
+  color: var(--light);
+  padding: 15px;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.btn {
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--secondary);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+    margin-left: 0;
+    /* Reset margin for smaller screens */
+  }
+}

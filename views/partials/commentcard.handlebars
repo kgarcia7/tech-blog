@@ -1,0 +1,13 @@
+{{#each this}}
+  <div class="card mb-3">
+    <div class="card-header">
+      <strong>{{user.username}}</strong>
+    </div>
+    <div class="card-body">
+      <p class="card-text">{{comment}}</p>
+    </div>
+    <div class="card-footer text-muted">
+      <small>Posted on {{formatDate createdAt}}</small>
+    </div>
+  </div>
+{{/each}}
