@@ -1,6 +1,6 @@
 :root {
-  --primary: #0766AD;
-  --secondary: #29ADB2;
+  --primary: #6499E9;
+  --secondary: #C5E898;
   --dark: #333;
   --light: #f9f9f9;
   --border-radius: 0.3rem;
@@ -28,10 +28,13 @@ body {
 .navbar {
   background-color: var(--primary);
   color: var(--light);
-  padding: 20px 0;
+  padding: 20px 15px;
   position: fixed;
   top: 0;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-brand {
@@ -39,12 +42,12 @@ body {
   font-weight: bold;
   text-decoration: none;
   color: var(--light);
+  margin-right: auto;
 }
 
 .navbar-nav {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
 }
 
 .nav-item {
@@ -62,9 +65,15 @@ body {
   color: var(--secondary);
 }
 
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: end;
+}
+
 main {
   padding: 90px 0 20px;
-  /* Adjusted padding to accommodate the navbar */
 }
 
 .post {
@@ -95,6 +104,11 @@ main {
   color: var(--light);
   padding: 15px;
   border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.col-auto {
+  flex-grow: 1;
+  margin-top: 40px;
 }
 
 .btn {
