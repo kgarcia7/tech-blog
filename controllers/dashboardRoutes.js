@@ -73,7 +73,7 @@ router.get("/edit/:id", withAuth, (req, res) => {
       // Serialize retrieved data
       const post = postData.get({ plain: true });
       // Render the edit-post view with retrieved data
-      res.render("edit-post", {
+      res.render("editpost", {
         post,
         loggedIn: true,
         username: req.session.username,
@@ -88,7 +88,7 @@ router.get("/edit/:id", withAuth, (req, res) => {
 // Route to render the form for creating a new post ('/dashboard/new)
 router.get("/new", withAuth, (req, res) => {
   // Render the new-post view with the current username
-  res.render("new-post", { username: req.session.username });
+  res.render("newpost", { username: req.session.username });
 });
 
 module.exports = router;

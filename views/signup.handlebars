@@ -1,14 +1,15 @@
 <div>
   <h2>Create a username and password</h2>
-  <form>
+  <form id="signup-form">
     <div>
       <label for="username">Username</label>
-      <input placeholder="Username" type="username">
+      <input placeholder="Username" type="username" id="username-signup">
     </div>
 
     <div>
       <label for="password">Password</label>
-      <input placeholder="Password">Must be atleast 6 characters long</div>
+      <input placeholder="Password" type="password" id="password-signup">
+      <div>Must be atleast 6 characters long</div>
     </div>
 
     <div>
@@ -18,3 +19,5 @@
     <button type="submit">Sign Up</button>
   </form>
 </div>
+
+<script src="../public/js/signup.js"
