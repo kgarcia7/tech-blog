@@ -1,0 +1,24 @@
+<p>Log in to leave a comment</p>
+<div>
+  <div>
+    <h5>{{post.title}}</h5>
+    <h6>Posted by {{post.user.username}} on {{formateData post.created_at}}</h8>
+  </div>
+
+  <div>
+    {{> commentcard post.comments}}
+  </div>
+</div>
+
+<input type="hidden" name="post-id" value="{{post.id}}"/>
+
+{{#if loggedIn}}
+<div>
+  <div></div>
+  <form>
+    <p>Leave Comment</p>
+    <textarea name="comment-body"></textarea>
+    <button type="submit">Submit Comment</button>
+  </form>
+</div>
+{{/if}}

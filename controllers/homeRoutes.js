@@ -7,11 +7,11 @@ router.get("/", async (req, res) => {
   try {
     // Retrieve all posts from the database including associated comments and authors
     const postData = await Post.findAll({
-      attributes: ["id", "title", "content", "created_at"],
+      attributes: ["id", "title", "content", "createdAt"],
       include: [
         {
           model: Comment,
-          attributes: ["id", "comment", "postId", "userId", "created_at"],
+          attributes: ["id", "comment", "postId", "userId", "createdAt"],
           include: {
             model: User,
             attributes: ["username"],
@@ -23,7 +23,7 @@ router.get("/", async (req, res) => {
         },
       ],
       // Order posts by their creation date in descending order
-      order: [["created_at", "DESC"]],
+      order: [["createdAt", "DESC"]],
     });
     // Serialize retrieved data
     const posts = postData.map((post) => post.get({ plain: true }));
@@ -46,11 +46,11 @@ router.get("/post/:id", async (req, res) => {
     // Find a post by its ID along with its associated comments and author
     const postData = await Post.findOne({
       where: { id: req.params.id },
-      attributes: ["id", "content", "title", "created_at"],
+      attributes: ["id", "content", "title", "createdAt"],
       include: [
         {
           model: Comment,
-          attributes: ["id", "comment", "postId", "userId", "created_at"],
+          attributes: ["id", "comment", "postId", "userId", "createdAt"],
           include: {
             model: User,
             attributes: ["username"],

@@ -7,6 +7,28 @@
     <link rel="stylesheet" href="../../public/css/style.css" />
   </head>
 
-  <div>
-  </div>
+  <body>
+    <nav>
+      <div>
+        <a href="/">Home</a>
+        <a href="/dashboard">Dashboard</a>
+        {{#if loggedIn}}
+          <a href="/login">Logout</a>
+        {{else}}
+          <a href="/login">Login</a>
+        {{/if}}
+      </div>
+    </nav>
+
+    <header>
+      <div>
+        <h1>Karina's Tech Blog</h1>
+      </div>
+    </header>
+
+    <main>
+      {{{body}}}
+    </main>
+
+  </body>
 </html>
