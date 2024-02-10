@@ -76,6 +76,19 @@ main {
   padding: 90px 0 20px;
 }
 
+.main-title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
+
 .post {
   background-color: var(--light);
   border-radius: var(--border-radius);
@@ -123,6 +136,33 @@ main {
 
 .btn:hover {
   background-color: var(--secondary);
+}
+.comment-card {
+  margin-bottom: 20px;
+}
+
+.comment-card .card-header {
+  background-color: var(--secondary);
+  color: var(--light);
+}
+
+.comment-card .card-body {
+  background-color: var(--light);
+  border-top: 1px solid var(--secondary);
+}
+
+.comment-card .card-footer {
+  background-color: var(--secondary);
+  color: var(--light);
+}
+
+.header-title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {
